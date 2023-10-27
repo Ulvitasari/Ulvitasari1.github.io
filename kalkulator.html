@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Sederhana</title>
+    <style>
+        .calculator {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100%;
+            margin: 5px 0;
+        }
+        button {
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+        }
+    </style>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">WEBSITE SEDERHANA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#https://tik.ft.unm.ac.id">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Artikel.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Pendidikan.html">Pendidikan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Jadwal Kuliah.html">Jadwal Kuliah</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Buku Tamu.html"> Buku Tamu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Tugas.javascript.html">javascript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kalkulator.html">Kalkulator</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="calculator">
+        <h2>Kalkulator Sederhana</h2>
+        <input type="text" id="number1" placeholder="Bilangan 1">
+        <input type="text" id="number2" placeholder="Bilangan 2">
+        <input type="text" id="result" placeholder="Hasil" readonly>
+        <br>
+        <button onclick="add()">+</button>
+        <button onclick="subtract()">-</button>
+        <button onclick="multiply()">*</button>
+        <button onclick="divide()">/</button>
+    </div>
+
+    <script>
+        function add() {
+            const num1 = parseFloat(document.getElementById("number1").value);
+            const num2 = parseFloat(document.getElementById("number2").value);
+            const result = num1 + num2;
+            document.getElementById("result").value = result;
+        }
+
+        function subtract() {
+            const num1 = parseFloat(document.getElementById("number1").value);
+            const num2 = parseFloat(document.getElementById("number2").value);
+            const result = num1 - num2;
+            document.getElementById("result").value = result;
+        }
+
+        function multiply() {
+            const num1 = parseFloat(document.getElementById("number1").value);
+            const num2 = parseFloat(document.getElementById("number2").value);
+            const result = num1 * num2;
+            document.getElementById("result").value = result;
+        }
+
+        function divide() {
+            const num1 = parseFloat(document.getElementById("number1").value);
+            const num2 = parseFloat(document.getElementById("number2").value);
+            if (num2 !== 0) {
+                const result = num1 / num2;
+                document.getElementById("result").value = result;
+            } else {
+                document.getElementById("result").value = "Tidak bisa dibagi oleh 0";
+            }
+        }
+    </script>
+</body>
+</html>
